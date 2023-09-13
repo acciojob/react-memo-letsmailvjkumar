@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-
+import "../styles/App.css";
 const App = () => {
   const [todos, setTodos] = useState([]);
   const [count, setCount] = useState(0);
@@ -20,8 +20,15 @@ const App = () => {
     <div id="main">
       <h2>React.useMemo</h2>
       <h3>My todos</h3>
-      <p>{todos}</p>
-      <button id="add-todo-btn" onClick={() => setTodos("New Todo")}>
+      <ul id='todo'>
+        {
+            todos.map((todo, index) => {
+                return <li key={index} id={`todo-${index}`}>{todo}</li>;
+                }
+            )
+        }
+      </ul>
+      <button id="add-todo-btn" onClick={() => setTodos([...todos,'New Todo'])}>
         Add Todo
       </button>
       <hr></hr>
@@ -40,7 +47,8 @@ const App = () => {
         value={newSkill}
         onChange={(e) => setNewSkill(e.target.value)}
       />
-      <button onClick={handleAddSkill}>Add Skill</button>
+      <button id='#skill-btn' 
+      onClick={handleAddSkill}>Add Skill</button>
       <ul>
         {skill.map((item, index) => {
           return <li key={index}>{item}</li>;
