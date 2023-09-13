@@ -32,12 +32,12 @@ const App = () => {
         Add Todo
       </button>
       <hr></hr>
-      <span id="calc">Count: {count}</span>
+      <span >Count: {count}</span>
       <button id="incr-cnt" onClick={() => setCount(count + 1)}>
         0
       </button>
       <h3>Expensive Calculation</h3>
-      <p>1000000000</p>
+      <p id="calc">1000000000</p>
       <hr></hr>
       <hr></hr>
       <h3>React.memo</h3>
