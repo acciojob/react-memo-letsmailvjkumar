@@ -34,7 +34,7 @@ const App = () => {
       <hr></hr>
       <span>Count: {count}</span>
       <button id="incr-cnt" onClick={() => setCount(count + 1)}>
-        +
+        0
       </button>
       <h3>Expensive Calculation</h3>
       <p>1000000000</p>
@@ -47,7 +47,7 @@ const App = () => {
         value={newSkill}
         onChange={(e) => setNewSkill(e.target.value)}
       />
-      <button id='#skill-btn' 
+      <button id='skill-btn' 
       onClick={handleAddSkill}>Add Skill</button>
       <ul>
         {skill.map((item, index) => {
