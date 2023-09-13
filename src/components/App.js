@@ -32,8 +32,8 @@ const App = () => {
         Add Todo
       </button>
       <hr></hr>
-      <span>Count: {count}</span>
-      <button id="#calc" onClick={() => setCount(count + 1)}>
+      <span id="calc">Count: {count}</span>
+      <button id="incr-cnt" onClick={() => setCount(count + 1)}>
         0
       </button>
       <h3>Expensive Calculation</h3>
