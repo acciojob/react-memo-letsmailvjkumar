@@ -33,7 +33,7 @@ const App = () => {
       </button>
       <hr></hr>
       <span>Count: {count}</span>
-      <button id="incr-cnt" onClick={() => setCount(count + 1)}>
+      <button id="#calc" onClick={() => setCount(count + 1)}>
         0
       </button>
       <h3>Expensive Calculation</h3>
@@ -51,7 +51,7 @@ const App = () => {
       onClick={handleAddSkill}>Add Skill</button>
       <ul>
         {skill.map((item, index) => {
-          return <li key={index}>{item}</li>;
+          return <li key={index} id='item-jumbotron'>{item}</li>;
         })}
       </ul>
     </div>
