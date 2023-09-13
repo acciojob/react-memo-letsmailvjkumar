@@ -4,6 +4,7 @@ const App = () => {
   const [todos, setTodos] = useState([]);
   const [count, setCount] = useState(0);
   const [skill, setSkill] = useState([]);
+  const[calc, setCalc] = useState(1000000000);
   const [newSkill, setNewSkill] = useState("");
 
   // check the input length and add the skill to the list
@@ -33,11 +34,11 @@ const App = () => {
       </button>
       <hr></hr>
       <span id="incr-cnt">Count: {count}</span>
-      <button id="incr-btn" onClick={() => setCount(count + 1)}>
+      <button id="incr-btn" onClick={() => {setCount(count + 1); setCalc(calc+1);}}>
         0
       </button>
       <h3>Expensive Calculation</h3>
-      <p id="calc">1000000000</p>
+      <p id="calc">{calc}</p>
       <hr></hr>
       <hr></hr>
       <h3>React.memo</h3>
